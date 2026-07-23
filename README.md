@@ -1,46 +1,71 @@
-# Astro Starter Kit: Basics
+# 🏃‍♂️ Endurance APP
 
-```sh
-npm create astro@latest -- --template basics
-```
+Aplicación web para organizar y consultar información relacionada con el mundo de la resistencia: deportes, entrenadores y atletas. Está construida con **Astro** y utiliza **Bootstrap** para la interfaz.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🚧 Proyecto en desarrollo. Algunas secciones son todavía páginas iniciales y los datos de deportes se cargan desde modelos locales.
 
-## 🚀 Project Structure
+## ✨ Funcionalidades actuales
 
-Inside of your Astro project, you'll see the following folders and files:
+- 🏠 Página de inicio.
+- 🏅 Listado de deportes con nombre y descripción.
+- 🧑‍🏫 Sección inicial de entrenadores.
+- 🏃‍♀️ Ruta preparada para atletas.
+- 🧭 Barra de navegación compartida entre las páginas.
+- 📦 Modelos separados para usuarios, atletas, entrenadores y deportes.
+
+## 🛠️ Tecnologías
+
+- ⚡ [Astro](https://astro.build/)
+- 🎨 [Bootstrap](https://getbootstrap.com/) mediante CDN
+- 🟨 JavaScript
+- 🟢 Node.js `>=22.12.0`
+
+## 📁 Estructura del proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── public/                 # Archivos públicos y favicon
+├── src/
+│   ├── components/         # Componentes reutilizables, como la navegación
+│   ├── layouts/            # Layout principal de la aplicación
+│   ├── models/             # Datos y modelos de dominio
+│   ├── pages/              # Rutas de Astro
+│   │   ├── deportes/       # Listado de deportes
+│   │   └── entrenadores/   # Sección de entrenadores
+│   └── services/           # Servicios de acceso a datos
+├── astro.config.mjs       # Configuración de Astro
+├── package.json            # Dependencias y scripts
+└── tsconfig.json           # Configuración de TypeScript
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Instalación
 
-## 🧞 Commands
+Necesitas tener instalado Node.js `22.12.0` o una versión superior.
 
-All commands are run from the root of the project, from a terminal:
+```bash
+git clone <url-del-repositorio>
+cd enduranceapp-astro
+npm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 💻 Comandos disponibles
 
-## 👀 Want to learn more?
+Ejecuta los comandos desde la raíz del proyecto:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia el servidor de desarrollo en `http://localhost:4321`. |
+| `npm run build` | Genera la versión de producción en `dist/`. |
+| `npm run preview` | Previsualiza localmente la compilación de producción. |
+| `npm run astro ...` | Ejecuta comandos de la CLI de Astro. |
+
+## 🧭 Rutas principales
+
+- `/` - Página de inicio.
+- `/deportes` - Consulta de deportes disponibles.
+- `/entrenadores` - Sección de entrenadores.
+- `/atletas` - Ruta prevista para atletas.
+
+## 📚 Documentación
+
+Para ampliar el proyecto, consulta la [documentación oficial de Astro](https://docs.astro.build/).
